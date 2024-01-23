@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Give your game / page a title! -->
+  <title> Maze Generator and Solver </title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <!-- This will load the script file AFTER the document is loaded -->
+  <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+  <h1>Maze Generator and Solver</h1>
+  <h3>By Jakub Warszewski</h3>
+
+  <div>
+    Instructions:
+    <ul>
+      <li>To generate a maze, input a width and height (3 or greater), and press generate. Note: Javascript cannot
+        reliably handle the recursive algorithm past mazes of ~180x180, but it is left unlimited for fun. </li>
+      <li>To enter a custom input, type in a maze of walls ("1") and empty spaces ("0"). Must be all on one line, with no spaces and a specified height and width. For example, "101101101" generates a straight line down through a 3x3 maze. </li>
+    </ul>
+
+
+
+  </div>
+
+  <h3>Generation:</h3>
+
+  <table>
+    <tr>
+      <td>
+        Height:
+      </td>
+      <td>
+        <input id="v_size">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Width:
+      </td>
+      <td>
+        <input id="h_size">
+      </td>
+    </tr>
+  </table>
+  
+
+  <table>
+    <tr>
+    <td>
+      <button style="height:50px" id="enter">Enter <br>Custom Input</button>
+    </td>
+    <td>
+      <textarea style="height:45px" id="maze_input"></textarea>
+    </td>
+    </tr>
+  </table>
+
+  <div id="invalid" hidden="true">Invalid Input</div>
+  <br>
+
+  <button id="solve">Toggle Solution</button>
+  <button id="generate_maze">Generate</button>
+  <br><br>
+
+  <canvas id="canvas" width="400" height="400" style="border:0px solid #000000;"></canvas>
+
+
+
+</body>
+
+
+</html>
